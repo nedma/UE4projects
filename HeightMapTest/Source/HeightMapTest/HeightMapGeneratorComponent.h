@@ -36,6 +36,12 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		FLinearColor World2HeightmapOffsetAndScale;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+		float HeightMap2WorldZAdd;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+		float HeightMap2WorldZMul;
+
+
 	UPROPERTY(BlueprintReadWrite)
 		USceneCaptureComponent2D* CaptureComponent;
 

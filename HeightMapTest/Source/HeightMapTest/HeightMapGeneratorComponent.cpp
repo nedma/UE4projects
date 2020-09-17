@@ -54,6 +54,10 @@ void UHeightMapGeneratorComponent::CalcShaderParameters()
 
 
 	World2HeightmapOffsetAndScale = FLinearColor(Vec_World2HeightmapOffsetAndScale);
+
+
+	HeightMap2WorldZAdd = CaptureComponent->GetComponentLocation().Z;
+	HeightMap2WorldZMul = -1.0f;
 }
 
 void UHeightMapGeneratorComponent::UpdateShaderParameters()
