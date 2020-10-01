@@ -22,9 +22,14 @@ UHeightMapGeneratorComponent::UHeightMapGeneratorComponent()
 void UHeightMapGeneratorComponent::BeginPlay()
 {
 	Super::BeginPlay();
+	
+	FindAllDependencies();
+}
 
+
+void UHeightMapGeneratorComponent::FindAllDependencies()
+{
 	CaptureComponent = GetOwner()->FindComponentByClass<USceneCaptureComponent2D>();
-
 }
 
 
@@ -38,6 +43,10 @@ void UHeightMapGeneratorComponent::TickComponent(float DeltaTime, ELevelTick Tic
 
 void UHeightMapGeneratorComponent::CalcShaderParameters()
 {
+#if WITH_EDITOR
+	FindAllDependencies();
+#endif
+
 	if (!CaptureComponent)
 		return;
 
