@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{CBCD7076-43EE-9A5D-E7DC-5582FCDAB5D6}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "CPPTest",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "RenderDocPlugin",
+			"Enabled": true
+		}
+	]
+}
